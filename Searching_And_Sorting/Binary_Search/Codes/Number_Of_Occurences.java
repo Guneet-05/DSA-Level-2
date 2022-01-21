@@ -1,3 +1,8 @@
+package Searching_And_Sorting.Binary_Search.Codes;
+public class Number_Of_Occurences{
+
+}
+
 class Solution {
     
     int firstIndex(int[] arr, int n, int x) {
