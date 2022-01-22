@@ -10,6 +10,7 @@ public class Main {
         int pa = arr.length;
         
         while(lo <= hi) {
+            int mid = lo + (hi-lo)/2;
             if(arr[mid] >= target) {
                 pa = mid;
                 hi = mid -1;
@@ -29,7 +30,7 @@ public class Main {
         int hi = arr.length-1;
         
         while(lo <= hi) {
-            
+            int mid = lo + (hi-lo)/2;
             if(arr[mid] <= target) {
                 lo = mid + 1;
             } else {
