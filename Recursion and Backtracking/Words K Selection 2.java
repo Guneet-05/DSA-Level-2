@@ -21,14 +21,14 @@ public class Main {
       int k = scn.nextInt();
 
       HashSet<Character> hs = new HashSet<>();
+      List<Character> chs = new ArrayList<>();
       for(int i=0;i<str.length();i++) {
-        hs.add(str.charAt(i));
+        if(hs.contains(str.charAt(i)) == false) {
+          hs.add(str.charAt(i));
+          chs.add(str.charAt(i));
+        }
       }
       
-      List<Character> chs = new ArrayList<>();
-      for(Character ch: hs) {
-        chs.add(ch);
-      }
 
 
       combinations(chs,-1,k,"");
