@@ -16,7 +16,7 @@ public class Main {
       // write your code here
       data.add(val);
       size++;
-      upheapify(data.size() - 1);
+      upheapify(size() - 1);
     }
     
     private void upheapify(int i) {
@@ -46,8 +46,8 @@ public class Main {
           return -1;
       }
       
-      swap(0,data.size() - 1);
-      int val = this.peek();
+      swap(0,size() - 1);
+      int val = data.get(size - 1);
       size--;
       downheapify(0);
       return val;
@@ -88,12 +88,11 @@ public class Main {
       return size;
     }
     
-    public ArrayList<Integer> heapSort(){
+    public ArrayList<Integer> heapSort() {
         ArrayList<Integer> sorted = new ArrayList<>();
         
         while(this.size() > 0) {
-            int val = this.remove();
-            sorted.add(val);
+            sorted.add(this.remove());
         }
         
         return sorted;
@@ -103,6 +102,7 @@ public class Main {
         while(size() > 0) {
             remove();
         }
+        
         return data;
     }
   }
@@ -133,5 +133,4 @@ public class Main {
     }
     System.out.println(qu.inPlaceHeapSort());
   }
-  
 }
