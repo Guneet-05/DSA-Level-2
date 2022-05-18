@@ -22,6 +22,10 @@ public class Solution {
     
     public int numWays(int n, int k) {
         // write your code here
+         if(n <= 0) return 0;
+        if(n == 1) return k;
+        if(n == 2) return k*k;
+        if(k == 1) return 0;
         int[] dp = new int[n+1];
         Arrays.fill(dp,-1);
         return memo(n,k,dp);
